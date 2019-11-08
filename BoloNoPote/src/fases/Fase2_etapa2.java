@@ -1,4 +1,4 @@
-
+/*
 import java.util.Scanner;
 
 public class Fase2_etapa2 {
@@ -24,3 +24,4 @@ public class Fase2_etapa2 {
     
 }
 }
+*/

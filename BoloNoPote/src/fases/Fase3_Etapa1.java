@@ -1,4 +1,4 @@
-
+/*
 package teste;
 
 // @author Gustavo Gabriel
@@ -10,3 +10,4 @@ public class Bolo {
     }
     
 }
+*/

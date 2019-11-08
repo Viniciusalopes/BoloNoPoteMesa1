@@ -44,14 +44,16 @@ Recheios e Coberturas:
 • 1 e 1/2 xícara de açúcar (200 gramas)
 
  */
+/* Viniciusalopes
 package bolo.de.pote;
-
 import java.util.Scanner;
+*/
 
 /**
  *
  * @author miguelneto
  */
+/*
 public class Fase1Etapa1 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
@@ -86,3 +88,4 @@ public class Fase1Etapa1 {
     
     
 }
+*/
