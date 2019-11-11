@@ -1,3 +1,5 @@
+package doc;
+
 /*
 import java.util.Scanner;
 

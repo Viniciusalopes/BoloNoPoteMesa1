@@ -1,3 +1,5 @@
+package doc;
+
 /*
  * 
 Muitas receitas de bolos no pote não gastam mais do que R$ 30 para fazer uma receita para 15 unidades.
