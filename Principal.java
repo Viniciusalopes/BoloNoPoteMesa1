@@ -87,9 +87,9 @@ import java.util.Scanner;
 
 public class Principal {
 
-    public static double ValidaQuantidade1(double x) {
+    public static double RecebeQuantidade() {
         Scanner entrada = new Scanner(System.in);
-
+        double x = 0;
         boolean erro = true;
         do {
             try {
@@ -242,7 +242,7 @@ public class Principal {
 
                         } else if (j == 1) {
                             System.out.print("Valor em R$ : ");
-                            ValidaQuantidade1(receita1[i][j]);
+                            receita1[i][j] = RecebeQuantidade();
                         }
                     }
                 }
@@ -280,7 +280,7 @@ public class Principal {
 
                         } else if (j == 1) {
                             System.out.print("Valor em R$ : ");
-                            ValidaQuantidade1(receita2[i][j]);
+                            receita2[i][j] = RecebeQuantidade();
                         }
                     }
                 }
@@ -321,11 +321,11 @@ public class Principal {
                             if (i == 9) {
                                 System.out.print("\nPotes de 220ml\nQuantidade em Unidades : ");
                             }
-                            receita1[i][j] = recebeQuantidadeProduto3(i);
+                            receita3[i][j] = recebeQuantidadeProduto3(i);
 
                         } else if (j == 1) {
                             System.out.print("Valor em R$ : ");
-                            ValidaQuantidade1(receita3[i][j]);
+                            receita3[i][j] = RecebeQuantidade();
                         }
                     }
                 }
@@ -467,7 +467,7 @@ public class Principal {
         }
 
         double quantidade = 0;
-        quantidade = ValidaQuantidade1(quantidade);
+        quantidade = RecebeQuantidade(quantidade);
 
         while (quantidade < quantidadeMinima) {
             if (i == 0) {
@@ -551,7 +551,7 @@ public class Principal {
         }
 
         double quantidade = 0;
-        quantidade = ValidaQuantidade1(quantidade);
+        quantidade = RecebeQuantidade(quantidade);
         while (quantidade < quantidadeMinima) {
             if (i == 0) {
 
@@ -634,7 +634,7 @@ public class Principal {
         }
 
         double quantidade = 0;
-        quantidade = ValidaQuantidade1(quantidade);
+        quantidade = RecebeQuantidade(quantidade);
         while (quantidade < quantidadeMinima) {
             if (i == 0) {
 
