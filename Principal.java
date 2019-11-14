@@ -73,6 +73,8 @@
  • 6 gemas
  • 1 xícara de água (250 ml)
  • 1 e 1/2 xícara de açúcar (200 gramas)
+ • 200 ml de leite
+ • 1 colher (de sopa) de manteiga. (50 gramas)
 
  
 
@@ -114,12 +116,12 @@ public class Principal {
 
         int NumReceitas = 3;
         double[][] receita1 = new double[9][2];//Matrizes correspondente a cada receita @GUSTAVO G.
-        double[][] receita2 = new double[8][2];//Miguel ja avia criado corretamente!
+        double[][] receita2 = new double[8][2];//Miguel ja havia criado corretamente!
         double[][] receita3 = new double[10][2];
         boolean erro = false;
         double[] ingrediente_receita1 = new double[9];
         double[] ingrediente_receita2 = new double[8];
-        double[] ingrediente_receita3 = new double[9];
+        double[] ingrediente_receita3 = new double[10];
 
         ingrediente_receita1[0] = 300.0;
         ingrediente_receita1[1] = 300.0;
@@ -147,8 +149,9 @@ public class Principal {
         ingrediente_receita3[4] = 480.0;
         ingrediente_receita3[5] = 20.0;
         ingrediente_receita3[6] = 250.0;
-        ingrediente_receita3[7] = 50.0;
-        ingrediente_receita3[8] = 15.0;
+        ingrediente_receita3[7] = 200.0;
+        ingrediente_receita3[8] = 50.0;
+        ingrediente_receita3[9] = 15.0;
 
         int a = 0; // indice manipular vetor receita1; 
         int b = 0; // indice manipular vetor receita2;
