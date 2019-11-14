@@ -464,7 +464,7 @@ public class Principal {
         }
 
         double quantidade = 0;
-        quantidade=ValidaQuantidade1(quantidade);
+        quantidade = ValidaQuantidade1(quantidade);
 
         while (quantidade < quantidadeMinima) {
             if (i == 0) {
@@ -548,7 +548,7 @@ public class Principal {
         }
 
         double quantidade = 0;
-        quantidade=ValidaQuantidade1(quantidade);
+        quantidade = ValidaQuantidade1(quantidade);
         while (quantidade < quantidadeMinima) {
             if (i == 0) {
 
@@ -581,7 +581,7 @@ public class Principal {
             } else if (i == 7) {
 
                 System.out.print("Quantidade insuficiente, quantidade mínima 15 unidades!\nInforme novamente: ");
-                
+
             }
             boolean erro = true;
             do {
@@ -631,7 +631,7 @@ public class Principal {
         }
 
         double quantidade = 0;
-        quantidade=ValidaQuantidade1(quantidade);
+        quantidade = ValidaQuantidade1(quantidade);
         while (quantidade < quantidadeMinima) {
             if (i == 0) {
 
