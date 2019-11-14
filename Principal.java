@@ -98,7 +98,7 @@ public class Principal {
                 }
                 erro = false;
             } catch (Exception e) {
-                System.out.print("Erro! Digite um valor válido!\n>");
+                System.out.print("Erro! Digite um valor válido!\n> ");
 
             }
         } while (erro);
