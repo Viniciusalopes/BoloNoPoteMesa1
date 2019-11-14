@@ -468,7 +468,6 @@ public class Principal {
 
         double quantidade = 0;
         quantidade = RecebeValor();
-
         while (quantidade < quantidadeMinima) {
             if (i == 0) {
 
