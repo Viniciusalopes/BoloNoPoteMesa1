@@ -87,7 +87,7 @@ import java.util.Scanner;
 
 public class Principal {
 
-    public static double RecebeQuantidade() {
+    public static double RecebeValor() {
         Scanner entrada = new Scanner(System.in);
         double x = 0;
         boolean erro = true;
@@ -242,7 +242,7 @@ public class Principal {
 
                         } else if (j == 1) {
                             System.out.print("Valor em R$ : ");
-                            receita1[i][j] = RecebeQuantidade();
+                            receita1[i][j] = RecebeValor();
                         }
                     }
                 }
@@ -280,7 +280,7 @@ public class Principal {
 
                         } else if (j == 1) {
                             System.out.print("Valor em R$ : ");
-                            receita2[i][j] = RecebeQuantidade();
+                            receita2[i][j] = RecebeValor();
                         }
                     }
                 }
@@ -325,7 +325,7 @@ public class Principal {
 
                         } else if (j == 1) {
                             System.out.print("Valor em R$ : ");
-                            receita3[i][j] = RecebeQuantidade();
+                            receita3[i][j] = RecebeValor();
                         }
                     }
                 }
@@ -467,7 +467,7 @@ public class Principal {
         }
 
         double quantidade = 0;
-        quantidade = RecebeQuantidade(quantidade);
+        quantidade = RecebeValor();
 
         while (quantidade < quantidadeMinima) {
             if (i == 0) {
@@ -551,7 +551,7 @@ public class Principal {
         }
 
         double quantidade = 0;
-        quantidade = RecebeQuantidade(quantidade);
+        quantidade = RecebeValor();
         while (quantidade < quantidadeMinima) {
             if (i == 0) {
 
@@ -634,7 +634,7 @@ public class Principal {
         }
 
         double quantidade = 0;
-        quantidade = RecebeQuantidade(quantidade);
+        quantidade = RecebeValor();
         while (quantidade < quantidadeMinima) {
             if (i == 0) {
 
