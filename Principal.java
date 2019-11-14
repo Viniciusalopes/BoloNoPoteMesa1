@@ -268,7 +268,7 @@ public class Principal {
                                 System.out.print("\nCreme de leite\nQuantidade em Gramas :  ");
                             }
                             if (i == 6) {
-                                System.out.print("\nChocolate em pó\nQuantidade em Gramas ");
+                                System.out.print("\nChocolate em pó\nQuantidade em Gramas : ");
                             }
                             if (i == 7) {
                                 System.out.print("\nPotes de 220ml \nQuantidade em Unidades : ");
@@ -403,22 +403,22 @@ public class Principal {
         }
 
         custo_unitario = custo_receita / 15;
-        System.out.printf("Qual o valor de venda do pote ? ");
+        System.out.printf("\n\nQual o valor de venda do pote ? ");
 
         valor_venda = entrada.nextDouble();
         lucro_real = valor_venda - custo_unitario;
         lucro_porcent = (lucro_real / custo_unitario) * 100;
 
-        if (custo_receita <= 30.0) {
-
+        if (custo_receita < 30.0) {
             System.out.printf("A receita é viável !!\n");
-            System.out.printf("O custo de cada bolo é : R$ %.2f\n", custo_unitario);
-            System.out.printf("Lucro em dinheiro por unidade é : R$ %.2f\n", lucro_real);
-            System.out.printf("Lucro em porcentagem é : %.2f %%\n", lucro_porcent);
         } else {
-
             System.out.println("A receita não é viável !!\n");
         }
+
+        System.out.printf("Custo da receita: R$ %.2f\n", custo_receita);
+        System.out.printf("O custo de cada bolo é : R$ %.2f\n", custo_unitario);
+        System.out.printf("Lucro em dinheiro por unidade é : R$ %.2f\n", lucro_real);
+        System.out.printf("Lucro em porcentagem é : %.2f %%\n", lucro_porcent);
 
 
         /*FIM Fase4_Etapa3 -------------------------------------------------------------------
