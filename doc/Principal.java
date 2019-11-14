@@ -27,52 +27,52 @@
  *             Gustavo Henrique
  *             Lucas Araujo da Silva
  *             Miguel Gonçalves dos Santos Neto
-               Renan de Paula
+ Renan de Paula
  *             
  * Finalidade: Projeto Bolos no Pote
  
-    Muitas receitas de bolos no pote não gastam mais do que R$ 30 para fazer uma receita para 15 unidades.
-    E essa é uma das maiores vantagens em começar a vender bolos no pote. Inclusive, com a chegada do natal, 
-    você pode até mesmo apostar em bolos para essa época do ano!
-    Assim, foram reunidas três de receitas de coberturas, de bolos no pote.
-    Desenvolver um software, onde:
-    DESAFIO
-    Desenvolver um software que ao digitar os valores dos ingredientes com suas respectivas medidas, devolva para o 
-    usuário qual/quais receita(s) ele poderá fazer dentro do limite de gasto proposto na contextualização.
-    1. Resolva a situação problema proposta. Com as três receitas. Os dados podem ser fictícios (valores e medidas).
-    2. Calcule automaticamente o valor de custo de cada bolo no pote (incluso o valor da embalagem);
-    3. Calcule quanto o usuário irá ter de lucro (em R$ e em %), dado um valor de venda.
-    4. O software pode ser rodado no console.
-    5. O software deverá ser apresentado para o(s) professor(es) da(s) disciplina(s) participante(s). “Rodando”.
+ Muitas receitas de bolos no pote não gastam mais do que R$ 30 para fazer uma receita para 15 unidades.
+ E essa é uma das maiores vantagens em começar a vender bolos no pote. Inclusive, com a chegada do natal, 
+ você pode até mesmo apostar em bolos para essa época do ano!
+ Assim, foram reunidas três de receitas de coberturas, de bolos no pote.
+ Desenvolver um software, onde:
+ DESAFIO
+ Desenvolver um software que ao digitar os valores dos ingredientes com suas respectivas medidas, devolva para o 
+ usuário qual/quais receita(s) ele poderá fazer dentro do limite de gasto proposto na contextualização.
+ 1. Resolva a situação problema proposta. Com as três receitas. Os dados podem ser fictícios (valores e medidas).
+ 2. Calcule automaticamente o valor de custo de cada bolo no pote (incluso o valor da embalagem);
+ 3. Calcule quanto o usuário irá ter de lucro (em R$ e em %), dado um valor de venda.
+ 4. O software pode ser rodado no console.
+ 5. O software deverá ser apresentado para o(s) professor(es) da(s) disciplina(s) participante(s). “Rodando”.
 
-    Para a massa do bolo:
-    Ingredientes:
-    • 300 g de açúcar
-    • 300 g de margarina gelada
-    • 4 ovos médios
-    • 300 g de farinha de trigo com fermento
-    Recheios e Coberturas:
+ Para a massa do bolo:
+ Ingredientes:
+ • 300 g de açúcar
+ • 300 g de margarina gelada
+ • 4 ovos médios
+ • 300 g de farinha de trigo com fermento
+ Recheios e Coberturas:
 
-    1. Leite ninho com morangos:
+ 1. Leite ninho com morangos:
 
-    • 2 latas de leite condensado (300 gramas cada)
-    • 2 latas de creme de leite (300 gramas cada)
-    • 6 colheres (de sopa) de leite ninho (100 gramas cada)
-    • 20 morangos
+ • 2 latas de leite condensado (300 gramas cada)
+ • 2 latas de creme de leite (300 gramas cada)
+ • 6 colheres (de sopa) de leite ninho (100 gramas cada)
+ • 20 morangos
 
-    2. Dois amores:
+ 2. Dois amores:
 
-    • 2 latas de leite condensado (300 gramas cada)
-    • 2 latas de creme de leite (300 gramas cada)
-    • 6 colheres de chocolate em pó (100 gramas cada)
+ • 2 latas de leite condensado (300 gramas cada)
+ • 2 latas de creme de leite (300 gramas cada)
+ • 6 colheres de chocolate em pó (100 gramas cada)
 
-    3. Maracujá:
+ 3. Maracujá:
 
-    • 2 xícaras de suco de maracujá (240 ml)
-    • 4 colheres de amido de milho (5 gramas cada)
-    • 6 gemas
-    • 1 xícara de água (250 ml)
-    • 1 e 1/2 xícara de açúcar (200 gramas)
+ • 2 xícaras de suco de maracujá (240 ml)
+ • 4 colheres de amido de milho (5 gramas cada)
+ • 6 gemas
+ • 1 xícara de água (250 ml)
+ • 1 e 1/2 xícara de açúcar (200 gramas)
 
  
 
@@ -85,20 +85,71 @@ import java.util.Scanner;
 
 public class Principal {
 
-    /**
-     * @param args the command line arguments
-     */
+    public static double ValidaQuantidade1(double x) {
+        Scanner entrada = new Scanner(System.in);
+
+        boolean erro = true;
+        do {
+            try {
+                x = Double.parseDouble(entrada.next());
+                while (x <= 0) {
+                    System.out.println("Valor inválido! Deve ser positivo.");
+                    x = Double.parseDouble(entrada.next());
+                }
+                erro = false;
+            } catch (Exception e) {
+                System.out.println("Erro! Digite um valor válido!");
+
+            }
+        } while (erro);
+
+        return x;
+
+    }
+
     public static void main(String[] args) {
 
         // Fase1_Etapa1 - miguelneto -----------------------------------------------------
         Scanner entrada = new Scanner(System.in);
-         
 
         int NumReceitas = 3;
-        double[][] receita1 = new double[9][2];
-        double[][] receita2 = new double[8][2];
+        double[][] receita1 = new double[9][2];//Matrizes correspondente a cada receita @GUSTAVO G.
+        double[][] receita2 = new double[8][2];//Miguel ja avia criado corretamente!
         double[][] receita3 = new double[10][2];
         boolean erro = false;
+        double[] ingrediente_receita1 = new double[9];
+        double[] ingrediente_receita2 = new double[8];
+        double[] ingrediente_receita3 = new double[9];
+
+        ingrediente_receita1[0] = 300.0;
+        ingrediente_receita1[1] = 300.0;
+        ingrediente_receita1[2] = 4.0;
+        ingrediente_receita1[3] = 300.0;
+        ingrediente_receita1[4] = 600.0;
+        ingrediente_receita1[5] = 600.0;
+        ingrediente_receita1[6] = 600.0;
+        ingrediente_receita1[7] = 20.0;
+        ingrediente_receita1[8] = 15.0;
+
+        ingrediente_receita2[0] = 300.0;
+        ingrediente_receita2[1] = 300.0;
+        ingrediente_receita2[2] = 4.0;
+        ingrediente_receita2[3] = 300.0;
+        ingrediente_receita2[4] = 600.0;
+        ingrediente_receita2[5] = 600.0;
+        ingrediente_receita2[6] = 600.0;
+        ingrediente_receita2[7] = 15.0;
+
+        ingrediente_receita3[0] = 500.0;
+        ingrediente_receita3[1] = 300.0;
+        ingrediente_receita3[2] = 10.0;
+        ingrediente_receita3[3] = 300.0;
+        ingrediente_receita3[4] = 480.0;
+        ingrediente_receita3[5] = 20.0;
+        ingrediente_receita3[6] = 250.0;
+        ingrediente_receita3[7] = 50.0;
+        ingrediente_receita3[8] = 15.0;
+
         int a = 0; // indice manipular vetor receita1; 
         int b = 0; // indice manipular vetor receita2;
         int c = 0; // indice manipular vetor receita3;
@@ -150,9 +201,10 @@ public class Principal {
         // FIM Fase2_Etapa2 - gustavo henrique  -----------------------------------------------------
         // 
         // Fase3_Etapa1 - gustavo  ----------------------------------------------------------
-       switch (opc) {
+        switch (opc) {
 
             case 1:
+                System.out.println("Receita 1 - Leite ninho com morango ");
                 for (int i = 0; i < 9; i++) {
                     for (int j = 0; j < 2; j++) {
                         if (j == 0) {
@@ -183,71 +235,18 @@ public class Principal {
                             if (i == 8) {
                                 System.out.println("Potes de 220ml \nQuantidade em Unidades : ");
                             }
-                            do {
-                                try {
-                                    receita1[i][j] = recebeQuantidadeProduto(i);
-                                    erro = true;
-                                    if (receita1[i][j] <= 0) {
-                                        System.out.println("Erro! Você digitou um valor negativo ou igual a 0!");
-                                        System.out.println("Digite um valor valido!");
-                                        if (j == 0) {
-                                            System.out.println("Quantidade: ");
-                                        }
-                                        if (j == 1) {
-                                            System.out.println("Valor: ");
-                                        }
-
-                                    }
-                                } catch (InputMismatchException e) {
-                                    System.out.println("Erro! opção invalida!");
-                                    System.out.println("Digite um valor valido!");
-                                    if (j == 0) {
-                                        System.out.println("Quantidade: ");
-                                    }
-                                    if (j == 1) {
-                                        System.out.println("Valor em R$ : ");
-                                    }
-
-                                }
-
-                            } while (erro == false || receita1[i][j] <= 0);
+                            receita1[i][j] = recebeQuantidadeProduto(i);
 
                         } else if (j == 1) {
                             System.out.println("Valor em R$ : ");
-                            do {
-                                try {
-                                    receita1[i][j] = entrada.nextDouble();
-                                    erro = true;
-                                    if (receita1[i][j] <= 0) {
-                                        System.out.println("Erro! Você digitou um valor negativo ou igual a 0!");
-                                        System.out.println("Digite um valor valido!");
-                                        if (j == 0) {
-                                            System.out.println("Quantidade: ");
-                                        }
-                                        if (j == 1) {
-                                            System.out.println("Valor em R$ : ");
-                                        }
-
-                                    }
-                                } catch (InputMismatchException e) {
-                                    System.out.println("Erro! opção invalida!");
-                                    System.out.println("Digite um valor valido!");
-                                    if (j == 0) {
-                                        System.out.println("Quantidade: ");
-                                    }
-                                    if (j == 1) {
-                                        System.out.println("Valor em R$ : ");
-                                    }
-
-                                }
-                                entrada.nextLine();
-                            } while (erro == false || receita1[i][j] <= 0);
+                            ValidaQuantidade1(receita1[i][j]);
                         }
                     }
                 }
                 break;
             case 2:
-              for (int i = 0; i < 8; i++) {
+                System.out.println("Receita 2 - Dois amores");
+                for (int i = 0; i < 8; i++) {
                     for (int j = 0; j < 2; j++) {
                         if (j == 0) {
                             if (i == 0) {
@@ -274,71 +273,19 @@ public class Principal {
                             if (i == 7) {
                                 System.out.println("Potes de 220ml \nQuantidade em Unidades : ");
                             }
-                            do {
-                                try {
-                                    receita1[i][j] = recebeQuantidadeProduto2(i);
-                                    erro = true;
-                                    if (receita1[i][j] <= 0) {
-                                        System.out.println("Erro! Você digitou um valor negativo ou igual a 0!");
-                                        System.out.println("Digite um valor valido!");
-                                        if (j == 0) {
-                                            System.out.println("Quantidade: ");
-                                        }
-                                        if (j == 1) {
-                                            System.out.println("Valor: ");
-                                        }
-
-                                    }
-                                } catch (InputMismatchException e) {
-                                    System.out.println("Erro! opção invalida!");
-                                    System.out.println("Digite um valor valido!");
-                                    if (j == 0) {
-                                        System.out.println("Quantidade: ");
-                                    }
-                                    if (j == 1) {
-                                        System.out.println("Valor em R$ : ");
-                                    }
-
-                                }
-
-                            } while (erro == false || receita1[i][j] <= 0);
+                            receita1[i][j] = recebeQuantidadeProduto2(i);
 
                         } else if (j == 1) {
                             System.out.println("Valor em R$ : ");
-                            do {
-                                try {
-                                    receita1[i][j] = entrada.nextDouble();
-                                    erro = true;
-                                    if (receita1[i][j] <= 0) {
-                                        System.out.println("Erro! Você digitou um valor negativo ou igual a 0!");
-                                        System.out.println("Digite um valor valido!");
-                                        if (j == 0) {
-                                            System.out.println("Quantidade: ");
-                                        }
-                                        if (j == 1) {
-                                            System.out.println("Valor em R$ : ");
-                                        }
-
-                                    }
-                                } catch (InputMismatchException e) {
-                                    System.out.println("Erro! opção invalida!");
-                                    System.out.println("Digite um valor valido!");
-                                    if (j == 0) {
-                                        System.out.println("Quantidade: ");
-                                    }
-                                    if (j == 1) {
-                                        System.out.println("Valor em R$ : ");
-                                    }
-
-                                }
-                                entrada.nextLine();
-                            } while (erro == false || receita1[i][j] <= 0);
+                            ValidaQuantidade1(receita2[i][j]);
                         }
                     }
                 }
+
                 break;
             case 3:
-               for (int i = 0; i < 10; i++) {
+                System.out.println("Receita 3 - Maracujá");
+                for (int i = 0; i < 10; i++) {
                     for (int j = 0; j < 2; j++) {
                         if (j == 0) {
                             if (i == 0) {
@@ -364,119 +311,134 @@ public class Principal {
                             }
                             if (i == 7) {
                                 System.out.println("Leite\nQuantidade em ml : ");
-                            } if (i == 8) {
-                                    System.out.println("Manteiga\nQuantidade em Gramas : ");
-                                }if (i == 9) {
-                                        System.out.println("Potes de 220ml\nQuantidade em Unidades : ");
-                                    }
-                            do {
-                                try {
-                                    receita1[i][j] = recebeQuantidadeProduto3(i);
-                                    erro = true;
-                                    if (receita1[i][j] <= 0) {
-                                        System.out.println("Erro! Você digitou um valor negativo ou igual a 0!");
-                                        System.out.println("Digite um valor valido!");
-                                        if (j == 0) {
-                                            System.out.println("Quantidade: ");
-                                        }
-                                        if (j == 1) {
-                                            System.out.println("Valor: ");
-                                        }
-
-                                    }
-                                } catch (InputMismatchException e) {
-                                    System.out.println("Erro! opção invalida!");
-                                    System.out.println("Digite um valor valido!");
-                                    if (j == 0) {
-                                        System.out.println("Quantidade: ");
-                                    }
-                                    if (j == 1) {
-                                        System.out.println("Valor em R$ : ");
-                                    }
-
-                                }
-
-                            } while (erro == false || receita1[i][j] <= 0);
+                            }
+                            if (i == 8) {
+                                System.out.println("Manteiga\nQuantidade em Gramas : ");
+                            }
+                            if (i == 9) {
+                                System.out.println("Potes de 220ml\nQuantidade em Unidades : ");
+                            }
+                            receita1[i][j] = recebeQuantidadeProduto3(i);
 
                         } else if (j == 1) {
                             System.out.println("Valor em R$ : ");
-                            do {
-                                try {
-                                    receita1[i][j] = entrada.nextDouble();
-                                    erro = true;
-                                    if (receita1[i][j] <= 0) {
-                                        System.out.println("Erro! Você digitou um valor negativo ou igual a 0!");
-                                        System.out.println("Digite um valor valido!");
-                                        if (j == 0) {
-                                            System.out.println("Quantidade: ");
-                                        }
-                                        if (j == 1) {
-                                            System.out.println("Valor em R$ : ");
-                                        }
-
-                                    }
-                                } catch (InputMismatchException e) {
-                                    System.out.println("Erro! opção invalida!");
-                                    System.out.println("Digite um valor valido!");
-                                    if (j == 0) {
-                                        System.out.println("Quantidade: ");
-                                    }
-                                    if (j == 1) {
-                                        System.out.println("Valor em R$ : ");
-                                    }
-
-                                }
-                                entrada.nextLine();
-                            } while (erro == false || receita1[i][j] <= 0);
+                            ValidaQuantidade1(receita3[i][j]);
                         }
                     }
                 }
                 break;
-                }
         }
-    
+
         // FIM Fase3_Etapa1 - gustavo  -----------------------------------------------------
 
         /*
          * Fase4_Etapa2 -------------------------------------------------------------------
         
-        Verificar se os ingredientes inseridos são suficientes para pelo menos uma receita
-        Se SIM:
-            Executar o código da Fase4_Etapa3
-        Se NÃO:
-            Exibe uma mensagem de erro.
-            Solicita todos os ingredientes novamente.
+         Verificar se os ingredientes inseridos são suficientes para pelo menos uma receita
+         Se SIM:
+         Executar o código da Fase4_Etapa3
+         Se NÃO:
+         Exibe uma mensagem de erro.
+         Solicita todos os ingredientes novamente.
             
-        FIM Fase4_Etapa2 -------------------------------------------------------------------
+         FIM Fase4_Etapa2 -------------------------------------------------------------------
 
          */
         //
         //
         //
         /* Fase4_Etapa3 -------------------------------------------------------------------
+         Calcular o custo da receita
+         Calcular o custo de um bolo
+         Verificar se a receita é viável ou não, porque e % de lucro
+         */
+        double qtd;
+        double vlr;
+        double rec;
+        double custo_ingrediente = 0.0;
+        double custo_receita = 0.0;
+        double custo_unitario = 0.0;
 
-            Calcular o custo da receita
-            Calcular o custo de um bolo
-            Verificar se a receita é viável ou não, porque e % de lucro
+        if (opc == 1) {
+            for (int i = 0; i < receita1.length; i++) {
+                qtd = receita1[i][0];
+                vlr = receita1[i][1];
+                rec = ingrediente_receita1[i];
+
+                // conta custo unitario
+                custo_ingrediente = (rec * vlr) / qtd;
+
+                // adiciona o valor da conta na soma
+                custo_receita = custo_receita + custo_ingrediente;
+            }
+        }
+        if (opc == 2) {
+            for (int i = 0; i < receita2.length; i++) {
+                qtd = receita2[i][0];
+                vlr = receita2[i][1];
+                rec = ingrediente_receita2[i];
+
+                // conta custo unitario
+                custo_ingrediente = (rec * vlr) / qtd;
+
+                // adiciona o valor da conta na soma
+                custo_receita = custo_receita + custo_ingrediente;
+            }
+
+        }
+
+        if (opc == 3) {
+            for (int i = 0; i < receita3.length; i++) {
+                qtd = receita3[i][0];
+                vlr = receita3[i][1];
+                rec = ingrediente_receita3[i];
+
+                // conta custo unitario
+                custo_ingrediente = (rec * vlr) / qtd;
+
+                // adiciona o valor da conta na soma
+                custo_receita = custo_receita + custo_ingrediente;
+            }
+
+        }
+
+        custo_unitario = custo_receita / 15;
+        System.out.printf("Qual o valor de venda do pote ? ");
+
+        valor_venda = entrada.nextDouble();
+        lucro_real = valor_venda - custo_unitario;
+        lucro_porcent = (lucro_real / custo_unitario) * 100;
+
+        if (custo_receita <= 30.0) {
+
+            System.out.printf("A receita é viável !!\n");
+            System.out.printf("O custo de cada bolo é : R$ %.2f\n", custo_unitario);
+            System.out.printf("Lucro em dinheiro por unidade é : R$ %.2f\n", lucro_real);
+            System.out.printf("Lucro em porcentagem é : %.2f %%\n", lucro_porcent);
+        } else {
+
+            System.out.println("A receita não é viável !!\n");
+        }
+
+
+        /*FIM Fase4_Etapa3 -------------------------------------------------------------------
+         //
+         //
+         //
+         /* Fase5_Etapa1 (FINAL) -------------------------------------------------------------------
         
-        FIM Fase4_Etapa3 -------------------------------------------------------------------
+         Colocar todo o programa dentro de um laco e perguntar no final se deseja
+         analisar outra receita.
+         Se SIM:
+         Volta para o início do programa
+         Se Não:
+         Encerra o programa.
+        
+         FIM Fase5_Etapa1 (FINAL) -------------------------------------------------------------------
          */
-        //
-        //
-        //
-        /* Fase5_Etapa1 (FINAL) -------------------------------------------------------------------
-        
-        Colocar todo o programa dentro de um laco e perguntar no final se deseja
-        analisar outra receita.
-        Se SIM:
-            Volta para o início do programa
-        Se Não:
-            Encerra o programa.
-        
-        FIM Fase5_Etapa1 (FINAL) -------------------------------------------------------------------
-         */
+    }
+
     private static double recebeQuantidadeProduto(int i) {
-      
 
         Scanner entrada = new Scanner(System.in);
 
@@ -501,14 +463,67 @@ public class Principal {
             quantidadeMinima = 15;
         }
 
-        int quantidade = entrada.nextInt();
+        double quantidade = 0;
+        quantidade=ValidaQuantidade1(quantidade);
+
         while (quantidade < quantidadeMinima) {
-            System.out.println("Quantidade insuficiente, informe novamente: ");
-            quantidade = entrada.nextInt();
+            if (i == 0) {
+
+                System.out.println("Quantidade insuficiente, quantidade mínima 300g, informe novamente: ");
+
+            } else if (i == 1) {
+
+                System.out.println("Quantidade insuficiente, quantidade mínima 300g, informe novamente: ");
+
+            } else if (i == 2) {
+
+                System.out.println("Quantidade insuficiente, quantidade mínima 4 unidades, informe novamente: ");
+
+            } else if (i == 3) {
+
+                System.out.println("Quantidade insuficiente, quantidade mínima 300g, informe novamente: ");
+
+            } else if (i == 4) {
+
+                System.out.println("Quantidade insuficiente, quantidade mínima 600g, informe novamente: ");
+
+            } else if (i == 5) {
+
+                System.out.println("Quantidade insuficiente, quantidade mínima 600g, informe novamente: ");
+
+            } else if (i == 6) {
+
+                System.out.println("Quantidade insuficiente, quantidade mínima 600g, informe novamente: ");
+
+            } else if (i == 7) {
+
+                System.out.println("Quantidade insuficiente, quantidade mínima 20 unidades, informe novamente: ");
+
+            } else if (i == 8) {
+
+                System.out.println("Quantidade insuficiente, quantidade mínima 15 unidades, informe novamente: ");
+
+            }
+            boolean erro = true;
+            do {
+                try {
+                    quantidade = Double.parseDouble(entrada.next());
+                    while (quantidade <= 0) {
+                        System.out.println("Valor inválido! Deve ser positivo.");
+                        quantidade = Double.parseDouble(entrada.next());
+                    }
+                    erro = false;
+                } catch (Exception e) {
+                    System.out.println("Erro! Digite uma quantidade válida!");
+
+                }
+            } while (erro);
+
         }
 
         return quantidade;
     }
+
     private static double recebeQuantidadeProduto2(int i) {
 
         Scanner entrada = new Scanner(System.in);
@@ -532,14 +547,62 @@ public class Principal {
             quantidadeMinima = 15;
         }
 
-        int quantidade = entrada.nextInt();
+        double quantidade = 0;
+        quantidade=ValidaQuantidade1(quantidade);
         while (quantidade < quantidadeMinima) {
-            System.out.println("Quantidade insuficiente, informe novamente: ");
-            quantidade = entrada.nextInt();
+            if (i == 0) {
+
+                System.out.println("Quantidade insuficiente, quantidade mínima 300g, informe novamente: ");
+
+            } else if (i == 1) {
+
+                System.out.println("Quantidade insuficiente, quantidade mínima 300g, informe novamente: ");
+
+            } else if (i == 2) {
+
+                System.out.println("Quantidade insuficiente, quantidade mínima 4 unidades, informe novamente: ");
+
+            } else if (i == 3) {
+
+                System.out.println("Quantidade insuficiente, quantidade mínima 300g, informe novamente: ");
+
+            } else if (i == 4) {
+
+                System.out.println("Quantidade insuficiente, quantidade mínima 600g, informe novamente: ");
+
+            } else if (i == 5) {
+
+                System.out.println("Quantidade insuficiente, quantidade mínima 600g, informe novamente: ");
+
+            } else if (i == 6) {
+
+                System.out.println("Quantidade insuficiente, quantidade mínima 600g, informe novamente: ");
+
+            } else if (i == 7) {
+
+                System.out.println("Quantidade insuficiente, quantidade mínima 15 unidades, informe novamente: ");
+                
+            }
+            boolean erro = true;
+            do {
+                try {
+                    quantidade = Double.parseDouble(entrada.next());
+                    while (quantidade <= 0) {
+                        System.out.println("Valor inválido! Deve ser positivo.");
+                        quantidade = Double.parseDouble(entrada.next());
+                    }
+                    erro = false;
+                } catch (Exception e) {
+                    System.out.println("Erro! Digite uma quantidade válida!");
+
+                }
+            } while (erro);
+
         }
 
         return quantidade;
     }
+
     private static double recebeQuantidadeProduto3(int i) {
 
         Scanner entrada = new Scanner(System.in);
@@ -561,19 +624,74 @@ public class Principal {
             quantidadeMinima = 250;
         } else if (i == 7) {
             quantidadeMinima = 200;
-        }else if (i == 8) {
+        } else if (i == 8) {
             quantidadeMinima = 50;
-        }else if (i == 9) {
+        } else if (i == 9) {
             quantidadeMinima = 15;
         }
 
-        int quantidade = entrada.nextInt();
+        double quantidade = 0;
+        quantidade=ValidaQuantidade1(quantidade);
         while (quantidade < quantidadeMinima) {
-            System.out.println("Quantidade insuficiente, informe novamente: ");
-            quantidade = entrada.nextInt();
+            if (i == 0) {
+
+                System.out.println("Quantidade insuficiente, quantidade mínima 500g, informe novamente: ");
+
+            } else if (i == 1) {
+
+                System.out.println("Quantidade insuficiente, quantidade mínima 300g, informe novamente: ");
+
+            } else if (i == 2) {
+
+                System.out.println("Quantidade insuficiente, quantidade mínima 10 unidades, informe novamente: ");
+
+            } else if (i == 3) {
+
+                System.out.println("Quantidade insuficiente, quantidade mínima 300g, informe novamente: ");
+
+            } else if (i == 4) {
+
+                System.out.println("Quantidade insuficiente, quantidade mínima 480ml, informe novamente: ");
+
+            } else if (i == 5) {
+
+                System.out.println("Quantidade insuficiente, quantidade mínima 20g, informe novamente: ");
+
+            } else if (i == 6) {
+
+                System.out.println("Quantidade insuficiente, quantidade mínima 250ml, informe novamente: ");
+
+            } else if (i == 7) {
+
+                System.out.println("Quantidade insuficiente, quantidade mínima 200ml, informe novamente: ");
+
+            } else if (i == 8) {
+
+                System.out.println("Quantidade insuficiente, quantidade mínima 50g, informe novamente: ");
+
+            } else if (i == 9) {
+
+                System.out.println("Quantidade insuficiente, quantidade mínima 15 unidades, informe novamente: ");
+
+            }
+            boolean erro = true;
+            do {
+                try {
+                    quantidade = Double.parseDouble(entrada.next());
+                    while (quantidade <= 0) {
+                        System.out.println("Valor inválido! Deve ser positivo.");
+                        quantidade = Double.parseDouble(entrada.next());
+                    }
+                    erro = false;
+                } catch (Exception e) {
+                    System.out.println("Erro! Digite uma quantidade válida!");
+
+                }
+            } while (erro);
+
         }
 
         return quantidade;
     }
-    }
 
+}
