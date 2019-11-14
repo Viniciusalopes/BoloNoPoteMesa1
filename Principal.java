@@ -173,7 +173,7 @@ public class Principal {
         //
         // FIM Fase2_Etapa1 - renanrpads  -----------------------------------------------------
         System.out.println("Viabilidade das receitas:");
-        System.out.println("Receita 1 - Leite ninho com morango\n"
+        System.out.print("Receita 1 - Leite ninho com morango\n"
                 + "Receita 2 - Dois amores\n"
                 + "Receita 3 - Maracujá\n\n"
                 + "Escolha a opção que você deseja (1, 2 ou 3): ");
@@ -209,31 +209,31 @@ public class Principal {
                     for (int j = 0; j < 2; j++) {
                         if (j == 0) {
                             if (i == 0) {
-                                System.out.print("Açúcar\nQuantidade em Gramas : ");
+                                System.out.print("\nAçúcar\nQuantidade em Gramas : ");
                             }
                             if (i == 1) {
-                                System.out.print("Margarina\nQuantidade em Gramas : ");
+                                System.out.print("\nMargarina\nQuantidade em Gramas : ");
                             }
                             if (i == 2) {
-                                System.out.print("Ovos\nQuantidade em Unidades : ");
+                                System.out.print("\nOvos\nQuantidade em Unidades : ");
                             }
                             if (i == 3) {
-                                System.out.print("Farinha de trigo com Fermento\nQuantidade em Gramas : ");
+                                System.out.print("\nFarinha de trigo com Fermento\nQuantidade em Gramas : ");
                             }
                             if (i == 4) {
-                                System.out.print("Leite condensado\nQuantidade em Gramas : ");
+                                System.out.print("\nLeite condensado\nQuantidade em Gramas : ");
                             }
                             if (i == 5) {
-                                System.out.print("Creme de leite\nQuantidade em Gramas : ");
+                                System.out.print("\nCreme de leite\nQuantidade em Gramas : ");
                             }
                             if (i == 6) {
-                                System.out.print("Leite ninho\nQuantidade em Gramas : ");
+                                System.out.print("\nLeite ninho\nQuantidade em Gramas : ");
                             }
                             if (i == 7) {
-                                System.out.print("Morangos\nQuantidade em Unidades : ");
+                                System.out.print("\nMorangos\nQuantidade em Unidades : ");
                             }
                             if (i == 8) {
-                                System.out.print("Potes de 220ml \nQuantidade em Unidades : ");
+                                System.out.print("\nPotes de 220ml \nQuantidade em Unidades : ");
                             }
                             receita1[i][j] = recebeQuantidadeProduto(i);
 
@@ -250,28 +250,28 @@ public class Principal {
                     for (int j = 0; j < 2; j++) {
                         if (j == 0) {
                             if (i == 0) {
-                                System.out.print("Açúcar\nQuantidade em Gramas : ");
+                                System.out.print("\nAçúcar\nQuantidade em Gramas : ");
                             }
                             if (i == 1) {
-                                System.out.print("Margarina\nQuantidade em Gramas : ");
+                                System.out.print("\nMargarina\nQuantidade em Gramas : ");
                             }
                             if (i == 2) {
-                                System.out.print("Ovos\nQuantidade em Unidades : ");
+                                System.out.print("\nOvos\nQuantidade em Unidades : ");
                             }
                             if (i == 3) {
-                                System.out.print("Farinha de trigo com Fermento\nQuantidade em Gramas : ");
+                                System.out.print("\nFarinha de trigo com Fermento\nQuantidade em Gramas : ");
                             }
                             if (i == 4) {
-                                System.out.print("Leite condensado\nQuantidade em Gramas : ");
+                                System.out.print("\nLeite condensado\nQuantidade em Gramas : ");
                             }
                             if (i == 5) {
-                                System.out.print("Creme de leite\nQuantidade em Gramas :  ");
+                                System.out.print("\nCreme de leite\nQuantidade em Gramas :  ");
                             }
                             if (i == 6) {
-                                System.out.print("Chocolate em pó\nQuantidade em Gramas ");
+                                System.out.print("\nChocolate em pó\nQuantidade em Gramas ");
                             }
                             if (i == 7) {
-                                System.out.print("Potes de 220ml \nQuantidade em Unidades : ");
+                                System.out.print("\nPotes de 220ml \nQuantidade em Unidades : ");
                             }
                             receita1[i][j] = recebeQuantidadeProduto2(i);
 
@@ -289,34 +289,34 @@ public class Principal {
                     for (int j = 0; j < 2; j++) {
                         if (j == 0) {
                             if (i == 0) {
-                                System.out.print("Açúcar\nQuantidade em Gramas : ");
+                                System.out.print("\nAçúcar\nQuantidade em Gramas : ");
                             }
                             if (i == 1) {
-                                System.out.print("Margarina\nQuantidade em Gramas : ");
+                                System.out.print("\nMargarina\nQuantidade em Gramas : ");
                             }
                             if (i == 2) {
-                                System.out.print("Ovos\nQuantidade em Unidades : ");
+                                System.out.print("\nOvos\nQuantidade em Unidades : ");
                             }
                             if (i == 3) {
-                                System.out.print("Farinha de trigo com Fermento\nQuantidade em Gramas : ");
+                                System.out.print("\nFarinha de trigo com Fermento\nQuantidade em Gramas : ");
                             }
                             if (i == 4) {
-                                System.out.print("Suco de maracujá\nQuantidade em ml : ");
+                                System.out.print("\nSuco de maracujá\nQuantidade em ml : ");
                             }
                             if (i == 5) {
-                                System.out.print("Amido de milho\nQuantidade em Gramas : ");
+                                System.out.print("\nAmido de milho\nQuantidade em Gramas : ");
                             }
                             if (i == 6) {
-                                System.out.print("Água\nQuantidade em ml : ");
+                                System.out.print("\nÁgua\nQuantidade em ml : ");
                             }
                             if (i == 7) {
-                                System.out.print("Leite\nQuantidade em ml : ");
+                                System.out.print("\nLeite\nQuantidade em ml : ");
                             }
                             if (i == 8) {
-                                System.out.print("Manteiga\nQuantidade em Gramas : ");
+                                System.out.print("\nManteiga\nQuantidade em Gramas : ");
                             }
                             if (i == 9) {
-                                System.out.print("Potes de 220ml\nQuantidade em Unidades : ");
+                                System.out.print("\nPotes de 220ml\nQuantidade em Unidades : ");
                             }
                             receita1[i][j] = recebeQuantidadeProduto3(i);
 
