@@ -469,39 +469,39 @@ public class Principal {
         while (quantidade < quantidadeMinima) {
             if (i == 0) {
 
-                System.out.println("Quantidade insuficiente, quantidade mínima 300g, informe novamente: ");
+                System.out.print("Quantidade insuficiente, quantidade mínima 300g!\nInforme novamente: ");
 
             } else if (i == 1) {
 
-                System.out.println("Quantidade insuficiente, quantidade mínima 300g, informe novamente: ");
+                System.out.print("Quantidade insuficiente, quantidade mínima 300g!\nInforme novamente: ");
 
             } else if (i == 2) {
 
-                System.out.println("Quantidade insuficiente, quantidade mínima 4 unidades, informe novamente: ");
+                System.out.print("Quantidade insuficiente, quantidade mínima 4 unidades!\nInforme novamente: ");
 
             } else if (i == 3) {
 
-                System.out.println("Quantidade insuficiente, quantidade mínima 300g, informe novamente: ");
+                System.out.print("Quantidade insuficiente, quantidade mínima 300g!\nInforme novamente: ");
 
             } else if (i == 4) {
 
-                System.out.println("Quantidade insuficiente, quantidade mínima 600g, informe novamente: ");
+                System.out.print("Quantidade insuficiente, quantidade mínima 600g!\nInforme novamente: ");
 
             } else if (i == 5) {
 
-                System.out.println("Quantidade insuficiente, quantidade mínima 600g, informe novamente: ");
+                System.out.print("Quantidade insuficiente, quantidade mínima 600g!\nInforme novamente: ");
 
             } else if (i == 6) {
 
-                System.out.println("Quantidade insuficiente, quantidade mínima 600g, informe novamente: ");
+                System.out.print("Quantidade insuficiente, quantidade mínima 600g!\nInforme novamente: ");
 
             } else if (i == 7) {
 
-                System.out.println("Quantidade insuficiente, quantidade mínima 20 unidades, informe novamente: ");
+                System.out.print("Quantidade insuficiente, quantidade mínima 20 unidades!\nInforme novamente: ");
 
             } else if (i == 8) {
 
-                System.out.println("Quantidade insuficiente, quantidade mínima 15 unidades, informe novamente: ");
+                System.out.print("Quantidade insuficiente, quantidade mínima 15 unidades!\nInforme novamente: ");
 
             }
             boolean erro = true;
@@ -552,35 +552,35 @@ public class Principal {
         while (quantidade < quantidadeMinima) {
             if (i == 0) {
 
-                System.out.println("Quantidade insuficiente, quantidade mínima 300g, informe novamente: ");
+                System.out.print("Quantidade insuficiente, quantidade mínima 300g!\nInforme novamente: ");
 
             } else if (i == 1) {
 
-                System.out.println("Quantidade insuficiente, quantidade mínima 300g, informe novamente: ");
+                System.out.print("Quantidade insuficiente, quantidade mínima 300g!\nInforme novamente: ");
 
             } else if (i == 2) {
 
-                System.out.println("Quantidade insuficiente, quantidade mínima 4 unidades, informe novamente: ");
+                System.out.print("Quantidade insuficiente, quantidade mínima 4 unidades!\nInforme novamente: ");
 
             } else if (i == 3) {
 
-                System.out.println("Quantidade insuficiente, quantidade mínima 300g, informe novamente: ");
+                System.out.print("Quantidade insuficiente, quantidade mínima 300g!\nInforme novamente: ");
 
             } else if (i == 4) {
 
-                System.out.println("Quantidade insuficiente, quantidade mínima 600g, informe novamente: ");
+                System.out.print("Quantidade insuficiente, quantidade mínima 600g!\nInforme novamente: ");
 
             } else if (i == 5) {
 
-                System.out.println("Quantidade insuficiente, quantidade mínima 600g, informe novamente: ");
+                System.out.print("Quantidade insuficiente, quantidade mínima 600g!\nInforme novamente: ");
 
             } else if (i == 6) {
 
-                System.out.println("Quantidade insuficiente, quantidade mínima 600g, informe novamente: ");
+                System.out.print("Quantidade insuficiente, quantidade mínima 600g!\nInforme novamente: ");
 
             } else if (i == 7) {
 
-                System.out.println("Quantidade insuficiente, quantidade mínima 15 unidades, informe novamente: ");
+                System.out.print("Quantidade insuficiente, quantidade mínima 15 unidades!\nInforme novamente: ");
                 
             }
             boolean erro = true;
@@ -635,43 +635,43 @@ public class Principal {
         while (quantidade < quantidadeMinima) {
             if (i == 0) {
 
-                System.out.println("Quantidade insuficiente, quantidade mínima 500g, informe novamente: ");
+                System.out.print("Quantidade insuficiente, quantidade mínima 500g!\nInforme novamente: ");
 
             } else if (i == 1) {
 
-                System.out.println("Quantidade insuficiente, quantidade mínima 300g, informe novamente: ");
+                System.out.print("Quantidade insuficiente, quantidade mínima 300g!\nInforme novamente: ");
 
             } else if (i == 2) {
 
-                System.out.println("Quantidade insuficiente, quantidade mínima 10 unidades, informe novamente: ");
+                System.out.print("Quantidade insuficiente, quantidade mínima 10 unidades!\nInforme novamente: ");
 
             } else if (i == 3) {
 
-                System.out.println("Quantidade insuficiente, quantidade mínima 300g, informe novamente: ");
+                System.out.print("Quantidade insuficiente, quantidade mínima 300g!\nInforme novamente: ");
 
             } else if (i == 4) {
 
-                System.out.println("Quantidade insuficiente, quantidade mínima 480ml, informe novamente: ");
+                System.out.print("Quantidade insuficiente, quantidade mínima 480ml!\nInforme novamente: ");
 
             } else if (i == 5) {
 
-                System.out.println("Quantidade insuficiente, quantidade mínima 20g, informe novamente: ");
+                System.out.print("Quantidade insuficiente, quantidade mínima 20g!\nInforme novamente: ");
 
             } else if (i == 6) {
 
-                System.out.println("Quantidade insuficiente, quantidade mínima 250ml, informe novamente: ");
+                System.out.print("Quantidade insuficiente, quantidade mínima 250ml!\nInforme novamente: ");
 
             } else if (i == 7) {
 
-                System.out.println("Quantidade insuficiente, quantidade mínima 200ml, informe novamente: ");
+                System.out.print("Quantidade insuficiente, quantidade mínima 200ml!\nInforme novamente: ");
 
             } else if (i == 8) {
 
-                System.out.println("Quantidade insuficiente, quantidade mínima 50g, informe novamente: ");
+                System.out.print("Quantidade insuficiente, quantidade mínima 50g!\nInforme novamente: ");
 
             } else if (i == 9) {
 
-                System.out.println("Quantidade insuficiente, quantidade mínima 15 unidades, informe novamente: ");
+                System.out.print("Quantidade insuficiente, quantidade mínima 15 unidades!\nInforme novamente: ");
 
             }
             boolean erro = true;
